@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON COURSE</title>
+</head>
+<body>
+    
+    <ul id="people"></ul>
+    <script>
+        var person = {
+            name:"Brad",
+            age: 35,
+            adress:{
+                street:"Example street",
+                city:"Example city"
+            },
+            children:['Child 1',"Child 2"]
+        }
+
+       // person = JSON.stringify(person);
+
+       var people = [
+           {
+           name:'Brad',
+           age:35
+       },
+       {
+           name:'John',
+           age:40
+       },
+       {
+           name:'Sara',
+           age:25
+       }
+       
+       ]
+       var output = '';
+
+        for(var i=0; i < people.length;i++){
+            //console.log(people[i].name);
+            output += '<li>'+people[i].name+'</li>'
+        }
+        document.getElementById('people').innerHTML = output;
+    </script>
+</body>
+</html>
